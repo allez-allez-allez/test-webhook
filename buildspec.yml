@@ -1,6 +1,10 @@
 ---
 version: 0.2
 
+env:
+  variables:
+    RETRY_WAIT_MINS: 5
+    
 phases:
   install:
     runtime-versions:
@@ -15,3 +19,6 @@ phases:
     commands:
       - echo "Entered the build phase..."
       - echo "Build started on `date`"
+      - echo "Build wait for ${RETRY_WAIT_MINS} minutes"
+      - sleep ${RETRY_WAIT_MINS}m
+      - echo "Build finished on `date`"
