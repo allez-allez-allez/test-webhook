@@ -1,10 +1,6 @@
 ---
 version: 0.2
 
-env:
-  variables:
-    RETRY_WAIT_MINS: 5
-    
 phases:
   install:
     runtime-versions:
