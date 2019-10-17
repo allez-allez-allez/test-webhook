@@ -1,0 +1,14 @@
+{
+    "name": "javascript",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "format": "prettier --write **/*.ts",
+      "format-check": "prettier --check **/*.ts"
+    },
+    "dependencies": {
+      "prettier": "^1.0.0",
+      "request": "^1.0.0"
+    }
+  }

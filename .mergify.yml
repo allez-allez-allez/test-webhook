@@ -1,0 +1,18 @@
+pull_request_rules:
+  - name: Automatic approve Dependabot pull requests
+    conditions:
+      - author~=dependabot\[bot\]|dependabot-preview\[bot\]
+      - status-success=Linting - Check Style
+    actions:
+      review:
+        type: APPROVE
+        message: go codebuild go
+
+  - name: Automatic merge Dependabot pull requests
+    conditions:
+      - author~=dependabot\[bot\]|dependabot-preview\[bot\]
+      - status-success=Linting - Check Style
+      - status-success=codebuild/tml-test-webhook/pr
+    actions:
+      merge:
+        method: merge
