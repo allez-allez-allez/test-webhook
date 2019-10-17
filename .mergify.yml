@@ -6,8 +6,15 @@ pull_request_rules:
     actions:
       review:
         type: APPROVE
-        message: go codebuild go
 
+  - name: Write issue comment to start codebuild project
+    conditions:
+      - author~=dependabot\[bot\]|dependabot-preview\[bot\]
+      - "#approved-reviews-by>=1"
+    actions:
+      comment:
+        message: go codebuild go
+        
   - name: Automatic merge Dependabot pull requests
     conditions:
       - author~=dependabot\[bot\]|dependabot-preview\[bot\]
