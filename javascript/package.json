@@ -9,6 +9,7 @@
     },
     "dependencies": {
       "prettier": "^1.0.0",
-      "request": "^1.0.0"
+      "request": "^1.0.0",
+      "lodash": "^1.0.0"
     }
   }
